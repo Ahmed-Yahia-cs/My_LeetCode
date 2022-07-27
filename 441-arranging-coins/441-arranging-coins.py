@@ -2,15 +2,15 @@ class Solution:
     def arrangeCoins(self, n: int) -> int:
         
         level = 1
-        filled = 0
         
-        while n > 0:
+        while True:
             
-            n = n - level
+            cost = level *(level + 1) / 2
             
-            if n >= 0:
-                filled += 1
+            if cost <= n:
+                level += 1
+            
+            else:
+                break
                 
-            level += 1
-        
-        return filled
+        return level - 1
