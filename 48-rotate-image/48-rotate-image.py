@@ -3,4 +3,7 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        matrix[:] = list(zip(*matrix[::-1]))
+        # Reverse
+        matrix[:] = matrix[::-1]
+        # Rotate
+        matrix[:] = zip(*matrix)
