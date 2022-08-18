@@ -8,7 +8,7 @@ class Solution:
         x = x if x >= 0 else x * -1
         
         # Handeling the number 
-        while x > 0:
+        while x:
             remander = x % 10
             x = x // 10
             
